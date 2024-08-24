@@ -10,6 +10,8 @@ local Window = Library.CreateLib("Bloxy Hub - Key", "DarkTheme")
 
 local TabKey = Window:NewTab("Key")
 local SectionKey = TabKey:NewSection("Key System")
+local keyjoin = TabKey:NewSection("Come join the discord to get a key!")
+local keydis = TabKey:NewSection("https://discord.gg/uKkRMD5y")
 
 SectionKey:NewTextBox("Key", "Key", function(txt)
 	for i, v in ipairs(keyList) do
@@ -20,3 +22,11 @@ SectionKey:NewTextBox("Key", "Key", function(txt)
         end
     end
 end)
+
+local CreditsTab = Window:NewTab("Credits")
+local Credits0 = CreditsTab:NewSection("Main Scripter: @yesimakerobloxcheats")
+local Credits1 = CreditsTab:NewSection("Scripter: @nixxgames")
+local Credits2 = CreditsTab:NewSection("UI designer: @nixxgames")
+local Credits3 = CreditsTab:NewSection("Tester: @tiropitasspanako")
+
+local Credits4 = CreditsTab:NewSection("Discord: https://discord.gg/uKkRMD5y")
