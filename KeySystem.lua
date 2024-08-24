@@ -10,7 +10,7 @@ local Window = Library.CreateLib("Bloxy Hub - Key", "DarkTheme")
 
 local TabKey = Window:NewTab("Key")
 local SectionKey = TabKey:NewSection("Key System")
-local keyjoin = TabKey:NewSection("Come join the discord to get a key!")
+local keyjoin = TabKey:NewSection("Don't have a key? Come join the discord to get a key!")
 local keydis = TabKey:NewSection("https://discord.gg/uKkRMD5y")
 
 SectionKey:NewTextBox("Key", "Key", function(txt)
