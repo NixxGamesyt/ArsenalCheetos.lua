@@ -1,7 +1,3 @@
-if game.PlaceId ~= 286090429 then
-    return end
-end
-
 local keyList = {
     {7252238917,  "key-8met2dgv9bcpuoo9ajyytjwk"}, -- @nixxgames
     {7223726556,  "key-mayoof31uv8s3ipsgr9mpmnr"} -- @tiropitasspanako
