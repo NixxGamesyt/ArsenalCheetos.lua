@@ -1,12 +1,265 @@
-local function obf_adjnqwidqwjhdpoq() local function obf_wrapperfunc(obf_arg) if obf_arg then local Library=loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\79\216\33\204\23\29\131\122\206\5\80\130\50\213\16\79\217\55\201\23\66\222\54\211\10\83\201\59\200\74\68\195\56\147\28\111\201\37\200\7\8\231\52\202\11\10\249\28\145\40\78\206\39\221\22\94\131\56\221\13\73\131\38\211\17\85\207\48\146\8\82\205","\100\39\172\85\188")))();local Window=Library.CreateLib(LUAOBFUSACTOR_DECRYPT_STR_0("\143\116\182\152\42\237\80\172\130\115\224\56\152\146\32\168\118\184\140","\83\205\24\217\224"),LUAOBFUSACTOR_DECRYPT_STR_0("\194\196\223\54\210\205\200\48\227","\93\134\165\173"));local TabAimbot=Window:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\159\251\204\192\53\218","\30\222\146\161\162\90\174\210"));local SectionAimbot=TabAimbot:NewSection(LUAOBFUSACTOR_DECRYPT_STR_0("\214\67\127\5\241\70\117\25\241\14\113\3\232\76\127\30\165\75\102\15\247\14\43\67","\106\133\46\16"));local aimPart=LUAOBFUSACTOR_DECRYPT_STR_0("\112\37\114\248","\32\56\64\19\156\58");SectionAimbot:NewDropdown(LUAOBFUSACTOR_DECRYPT_STR_0("\110\201\247\81\95\230\192\74\201\247\66","\224\58\168\133\54\58\146"),LUAOBFUSACTOR_DECRYPT_STR_0("\109\87\89\250\112\146\199\27\88\68\95","\107\57\54\43\157\21\230\231"),{LUAOBFUSACTOR_DECRYPT_STR_0("\243\142\16\241","\175\187\235\113\149\217\188"),LUAOBFUSACTOR_DECRYPT_STR_0("\8\160\147\95\236","\24\92\207\225\44\131\25")},function(part) local FlatIdent_95CAC=0;local FlatIdent_95CAC;while true do if (FlatIdent_95CAC==0) then FlatIdent_95CAC=0;while true do if (FlatIdent_95CAC==0) then aimPart=part;print(LUAOBFUSACTOR_DECRYPT_STR_0("\106\218\181\78\20\105\11\195\185\94\15\61\88\214\180\73\24\105\78\215\226\12","\29\43\179\216\44\123")   .. part );break;end end break;end end end);local Players=game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\141\213\33\85\184\203\51","\44\221\185\64"));local RunService=game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\51\242\70\108\118\19\241\65\92\118","\19\97\135\40\63"));local UserInputService=game:GetService(LUAOBFUSACTOR_DECRYPT_STR_0("\155\79\54\41\6\63\190\73\39\8\42\35\184\85\48\62","\81\206\60\83\91\79"));local LocalPlayer=Players.LocalPlayer;local Camera=workspace.CurrentCamera;local settings={[LUAOBFUSACTOR_DECRYPT_STR_0("\111\162\221\112\32\215","\196\46\203\176\18\79\163\45")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\153\43\115\23\42\252","\143\216\66\30\126\68\155")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\139\193\0\201\202\183\232\192\163\197\61\202\215\183","\129\202\168\109\171\165\195\183")]=aimPart,[LUAOBFUSACTOR_DECRYPT_STR_0("\3\81\58\218\209\0\217\22\93\54\213\253\28\227\33\83","\134\66\56\87\184\190\116")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\29\56\4\185\22\255\30\17\46\48\30\132\63\196\23","\85\92\81\105\219\121\139\65")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\220\186\93\71\115\203\194\149\127\115\67\237\252\183\89\80\111","\191\157\211\48\37\28")]=200,[LUAOBFUSACTOR_DECRYPT_STR_0("\254\22\249\30\53\203\32\210\51\12\224\60\251\16\53\205","\90\191\127\148\124")]=Color3.fromRGB(255,255,255)};local fovCircle=Drawing.new(LUAOBFUSACTOR_DECRYPT_STR_0("\91\142\60\20\116\130","\119\24\231\78"));fovCircle.Visible=false;fovCircle.Radius=settings.Aimbot_FOV_Radius;fovCircle.Color=settings.Aimbot_FOV_Color;fovCircle.Thickness=1;fovCircle.Filled=false;fovCircle.Transparency=1;local function getClosestEnemy() local closestEnemy=nil;local closestDistance=math.huge;for _,player in pairs(Players:GetPlayers()) do if ((player~=LocalPlayer) and player.Character and player.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\170\56\168\75\210\79\24\134\31\170\69\200\112\16\144\57","\113\226\77\197\42\188\32")) and player.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\18\3\249\180\52\25\253\177","\213\90\118\148"))) then local FlatIdent_2584C=0;local FlatIdent_8D327;local distance;while true do if (FlatIdent_2584C==0) then FlatIdent_8D327=0;distance=nil;FlatIdent_2584C=1;end if (FlatIdent_2584C==1) then while true do if (FlatIdent_8D327==0) then if (settings.Aimbot_TeamCheck and (player.Team==LocalPlayer.Team)) then continue;end distance=(player.Character.HumanoidRootPart.Position-LocalPlayer.Character.HumanoidRootPart.Position).magnitude;FlatIdent_8D327=1;end if (FlatIdent_8D327==1) then if ((distance<closestDistance) and (distance<=settings.Aimbot_FOV_Radius)) then local FlatIdent_5B4A8=0;local FlatIdent_67C40;while true do if (FlatIdent_5B4A8==0) then FlatIdent_67C40=0;while true do if (FlatIdent_67C40==0) then closestDistance=distance;closestEnemy=player;break;end end break;end end end break;end end break;end end end end return closestEnemy;end local function aimAtEnemy() local FlatIdent_2953F=0;local FlatIdent_89ECE;local enemy;while true do if (FlatIdent_2953F==0) then FlatIdent_89ECE=0;enemy=nil;FlatIdent_2953F=1;end if (FlatIdent_2953F==1) then while true do if (FlatIdent_89ECE==0) then enemy=getClosestEnemy();if (enemy and enemy.Character and enemy.Character:FindFirstChild(settings.Aimbot_AimPart)) then local FlatIdent_47A9C=0;local aimPosition;while true do if (FlatIdent_47A9C==0) then aimPosition=enemy.Character[settings.Aimbot_AimPart].Position;Camera.CFrame=CFrame.new(Camera.CFrame.Position,aimPosition);break;end end end break;end end break;end end end UserInputService.InputBegan:Connect(function(input) if (input.UserInputType==Enum.UserInputType.MouseButton2) then settings.Aiming=true;end end);UserInputService.InputEnded:Connect(function(input) if (input.UserInputType==Enum.UserInputType.MouseButton2) then settings.Aiming=false;end end);RunService.RenderStepped:Connect(function() local FlatIdent_63487=0;local FlatIdent_2661B;while true do if (FlatIdent_63487==0) then FlatIdent_2661B=0;while true do if (FlatIdent_2661B==0) then fovCircle.Position=Vector2.new(Camera.ViewportSize.X/2 ,Camera.ViewportSize.Y/2 );if settings.Aimbot then local FlatIdent_7366E=0;local FlatIdent_475BC;while true do if (0==FlatIdent_7366E) then FlatIdent_475BC=0;while true do if (FlatIdent_475BC==0) then fovCircle.Visible=true;if settings.Aiming then aimAtEnemy();end break;end end break;end end else fovCircle.Visible=false;end break;end end break;end end end);SectionAimbot:NewToggle(LUAOBFUSACTOR_DECRYPT_STR_0("\122\39\185\84\66\79","\45\59\78\212\54"),LUAOBFUSACTOR_DECRYPT_STR_0("\36\89\132\140\138\43\237\255\30\22\130\133\130\110\162\246\22","\144\112\54\227\235\230\78\205"),function(state) local FlatIdent_31A5A=0;local FlatIdent_60EA1;while true do if (FlatIdent_31A5A==0) then FlatIdent_60EA1=0;while true do if (FlatIdent_60EA1==0) then settings.Aimbot=state;if settings.Aimbot then print(LUAOBFUSACTOR_DECRYPT_STR_0("\146\33\2\254\223\79\243\13\1\253\210\87\182\44","\59\211\72\111\156\176"));else print(LUAOBFUSACTOR_DECRYPT_STR_0("\111\142\238\47\65\147\163\9\71\148\226\47\66\130\231","\77\46\231\131"));end break;end end break;end end end);local TabESP=Window:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\159\103\134","\32\218\52\214"));local SectionESP=TabESP:NewSection(LUAOBFUSACTOR_DECRYPT_STR_0("\121\87\20\155\193\240\99\95\79\3\36\186\244","\58\46\119\81\200\145\208\37"));local espComponents={};local function createESP(v) local BoxOutline=Drawing.new(LUAOBFUSACTOR_DECRYPT_STR_0("\24\157\37\173\187\184","\86\75\236\80\204\201\221"));BoxOutline.Visible=false;BoxOutline.Color=Color3.new(1,0,0);BoxOutline.Thickness=3;BoxOutline.Transparency=1;BoxOutline.Filled=false;local Box=Drawing.new(LUAOBFUSACTOR_DECRYPT_STR_0("\65\80\98\132\236\142","\235\18\33\23\229\158"));Box.Visible=false;Box.Color=Color3.new(1,0,0);Box.Thickness=1;Box.Transparency=1;Box.Filled=false;local tracer=Drawing.new(LUAOBFUSACTOR_DECRYPT_STR_0("\124\179\207\190","\219\48\218\161"));tracer.Visible=false;tracer.Color=Color3.new(1,0,0);tracer.Thickness=1;espComponents[v]={BoxOutline,Box,tracer};RunService.RenderStepped:Connect(function() if (v.Character and v.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\204\100\113\72\213\64\233\224","\128\132\17\28\41\187\47")) and v.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\41\39\11\59\83\14\59\2\8\82\14\38\54\59\79\21","\61\97\82\102\90")) and (v~=LocalPlayer) and (v.Character.Humanoid.Health>0)) then local FlatIdent_31A5A=0;local RootPart;local Head;local RootPosition;local RootVis;local HeadPosition;local LegPosition;while true do if (FlatIdent_31A5A==2) then LegPosition=Camera:worldToViewportPoint(RootPart.Position-Vector3.new(0,3,0) );if RootVis then local FlatIdent_1BCFB=0;local FlatIdent_6FA1;while true do if (FlatIdent_1BCFB==0) then FlatIdent_6FA1=0;while true do if (FlatIdent_6FA1==2) then local FlatIdent_69253=0;while true do if (0==FlatIdent_69253) then Box.Position=Vector2.new(RootPosition.X-(Box.Size.X/2) ,RootPosition.Y-(Box.Size.Y/2) );Box.Visible=true;FlatIdent_69253=1;end if (1==FlatIdent_69253) then FlatIdent_6FA1=3;break;end end end if (4==FlatIdent_6FA1) then tracer.Visible=true;break;end if (FlatIdent_6FA1==3) then local FlatIdent_6A091=0;while true do if (1==FlatIdent_6A091) then FlatIdent_6FA1=4;break;end if (FlatIdent_6A091==0) then tracer.From=Vector2.new(Camera.ViewportSize.X/2 ,Camera.ViewportSize.Y);tracer.To=Vector2.new(RootPosition.X,RootPosition.Y);FlatIdent_6A091=1;end end end if (FlatIdent_6FA1==1) then local FlatIdent_A9A3=0;while true do if (FlatIdent_A9A3==0) then BoxOutline.Visible=true;Box.Size=Vector2.new(1000/RootPosition.Z ,HeadPosition.Y-LegPosition.Y );FlatIdent_A9A3=1;end if (1==FlatIdent_A9A3) then FlatIdent_6FA1=2;break;end end end if (0==FlatIdent_6FA1) then local FlatIdent_2FD19=0;while true do if (FlatIdent_2FD19==0) then BoxOutline.Size=Vector2.new(1000/RootPosition.Z ,HeadPosition.Y-LegPosition.Y );BoxOutline.Position=Vector2.new(RootPosition.X-(BoxOutline.Size.X/2) ,RootPosition.Y-(BoxOutline.Size.Y/2) );FlatIdent_2FD19=1;end if (FlatIdent_2FD19==1) then FlatIdent_6FA1=1;break;end end end end break;end end else local FlatIdent_72421=0;local FlatIdent_77C29;while true do if (FlatIdent_72421==0) then FlatIdent_77C29=0;while true do if (FlatIdent_77C29==0) then local FlatIdent_4508F=0;while true do if (FlatIdent_4508F==1) then FlatIdent_77C29=1;break;end if (FlatIdent_4508F==0) then BoxOutline.Visible=false;Box.Visible=false;FlatIdent_4508F=1;end end end if (FlatIdent_77C29==1) then tracer.Visible=false;break;end end break;end end end break;end if (FlatIdent_31A5A==1) then local FlatIdent_65290=0;while true do if (FlatIdent_65290==1) then FlatIdent_31A5A=2;break;end if (FlatIdent_65290==0) then RootPosition,RootVis=Camera:worldToViewportPoint(RootPart.Position);HeadPosition=Camera:worldToViewportPoint(Head.Position + Vector3.new(0,0.5,0) );FlatIdent_65290=1;end end end if (FlatIdent_31A5A==0) then local FlatIdent_521D6=0;while true do if (FlatIdent_521D6==1) then FlatIdent_31A5A=1;break;end if (0==FlatIdent_521D6) then RootPart=v.Character.HumanoidRootPart;Head=v.Character.Head;FlatIdent_521D6=1;end end end end else local FlatIdent_32BB2=0;local FlatIdent_2AC68;while true do if (FlatIdent_32BB2==0) then FlatIdent_2AC68=0;while true do if (FlatIdent_2AC68==0) then local FlatIdent_21297=0;while true do if (FlatIdent_21297==0) then BoxOutline.Visible=false;Box.Visible=false;FlatIdent_21297=1;end if (FlatIdent_21297==1) then FlatIdent_2AC68=1;break;end end end if (FlatIdent_2AC68==1) then tracer.Visible=false;break;end end break;end end end end);end local function destroyESP(v) if espComponents[v] then local FlatIdent_25DF3=0;while true do if (FlatIdent_25DF3==0) then for _,drawing in pairs(espComponents[v]) do drawing:Remove();end espComponents[v]=nil;break;end end end end SectionESP:NewToggle(LUAOBFUSACTOR_DECRYPT_STR_0("\137\29\155","\105\204\78\203\43\167\55\126"),LUAOBFUSACTOR_DECRYPT_STR_0("\145\165\36\25\31\1\198\83\169\175\99\59\32\52\135\66\166\184\42\14\7","\49\197\202\67\126\115\100\167"),function(state) if state then for _,v in pairs(Players:GetPlayers()) do if (v~=LocalPlayer) then createESP(v);end end Players.PlayerAdded:Connect(function(v) v.CharacterAdded:Connect(function() createESP(v);end);end);print(LUAOBFUSACTOR_DECRYPT_STR_0("\18\104\239\105\165\88\95\53\87\218\45","\62\87\59\191\73\224\54"));else local FlatIdent_44265=0;while true do if (FlatIdent_44265==1) then print(LUAOBFUSACTOR_DECRYPT_STR_0("\194\49\202\137\195\11\233\200\229\14\255\205","\169\135\98\154"));break;end if (0==FlatIdent_44265) then for _,v in pairs(Players:GetPlayers()) do destroyESP(v);end espComponents={};FlatIdent_44265=1;end end end end);local Tab=Window:NewTab(LUAOBFUSACTOR_DECRYPT_STR_0("\234\98\48\91\189\49\201\200\124\55\64\252\49","\168\171\23\68\52\157\83"));local Section=Tab:NewSection("Auto win basically even if it's kinda sucky");Section:NewLabel(LUAOBFUSACTOR_DECRYPT_STR_0("\193\66\208\237\4\25\199\219\70\219\237\23\4\180\223\49\220\237\4\9\163\209\85\181\143\28\11\181\219\95\181\143\28\29\166\199\66","\231\148\17\149\205\69\77"));local backstabActive=false;Section:NewToggle(LUAOBFUSACTOR_DECRYPT_STR_0("\161\178\211\244\23\253\129\164\204\232\67\254\130","\159\224\199\167\155\55"),LUAOBFUSACTOR_DECRYPT_STR_0("\214\230\40\221\183\209\61\209\252\179\47\198\246\241\124\212\242\242\40\199\229\246","\178\151\147\92"),function(state) local FlatIdent_33EA4=0;while true do if (FlatIdent_33EA4==0) then backstabActive=state;if state then print(LUAOBFUSACTOR_DECRYPT_STR_0("\173\232\88\61\82\110\123\143\246\95\38\19\78\58\169\243\77\48\30\73\126","\26\236\157\44\82\114\44"));local localPlayer=Players.LocalPlayer;local currentCamera=workspace.CurrentCamera;local function teleportBehindTarget(player) if (player.Character and player.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\2\59\216\90\36\33\220\95\24\33\218\79\26\47\199\79","\59\74\78\181"))) then localPlayer.Character.HumanoidRootPart.CFrame=player.Character.HumanoidRootPart.CFrame + (player.Character.HumanoidRootPart.CFrame.LookVector *  -4) ;end end local function getRandomEnemyPlayer() local FlatIdent_5724B=0;local FlatIdent_29B3D;local enemies;while true do if (FlatIdent_5724B==1) then while true do local FlatIdent_29B3D=0;while true do if (FlatIdent_29B3D==0) then if (FlatIdent_29B3D==1) then local FlatIdent_83844=0;while true do if (FlatIdent_83844==0) then if ( #enemies>0) then return enemies[math.random(1, #enemies)];end return nil;end end end if (FlatIdent_29B3D==0) then local FlatIdent_7063=0;while true do if (FlatIdent_7063==0) then enemies={};for _,player in ipairs(Players:GetPlayers()) do if ((player~=localPlayer) and (player.TeamColor~=localPlayer.TeamColor)) then table.insert(enemies,player);end end FlatIdent_7063=1;end if (FlatIdent_7063==1) then FlatIdent_29B3D=1;break;end end end break;end end end break;end if (0==FlatIdent_5724B) then FlatIdent_29B3D=0;enemies=nil;FlatIdent_5724B=1;end end end spawn(function() while backstabActive do local FlatIdent_3EEE1=0;local FlatIdent_759F1;local enemy;while true do if (FlatIdent_3EEE1==0) then FlatIdent_759F1=0;enemy=nil;FlatIdent_3EEE1=1;end if (FlatIdent_3EEE1==1) then while true do if (FlatIdent_759F1==1) then wait(0.3);break;end if (0==FlatIdent_759F1) then local FlatIdent_817B0=0;while true do if (FlatIdent_817B0==0) then enemy=getRandomEnemyPlayer();if (enemy and enemy.Character and enemy.Character:FindFirstChild(LUAOBFUSACTOR_DECRYPT_STR_0("\13\196\87\91\189\42\216\94\104\188\42\197\106\91\161\49","\211\69\177\58\58"))) then local FlatIdent_6B983=0;while true do if (FlatIdent_6B983==1) then currentCamera.CFrame=CFrame.new(currentCamera.CFrame.Position,enemy.Character.HumanoidRootPart.Position);break;end if (FlatIdent_6B983==0) then local FlatIdent_10550=0;while true do if (0==FlatIdent_10550) then teleportBehindTarget(enemy);wait(0.1);FlatIdent_10550=1;end if (FlatIdent_10550==1) then FlatIdent_6B983=1;break;end end end end end FlatIdent_817B0=1;end if (FlatIdent_817B0==1) then FlatIdent_759F1=1;break;end end end end break;end end end end);else local FlatIdent_43BEE=0;local FlatIdent_287B5;while true do if (0==FlatIdent_43BEE) then FlatIdent_287B5=0;while true do if (FlatIdent_287B5==0) then print(LUAOBFUSACTOR_DECRYPT_STR_0("\150\240\109\250\169\233\182\230\114\230\253\202\181\165\93\252\250\202\181\233\124\241","\171\215\133\25\149\137"));backstabActive=false;break;end end break;end end end break;end end end);else local sdawdwqdq=obf_arg[1];end end if (obf_tonumber(obf_stringmatch(obf_stringmatch(({obf_pcall(obf_wrapperfunc,nil)})[2],":%d+:"),"%d+"))==1) then return obf_wrapperfunc({});else return obf_adjnqwidqwjhdpoq();end end return obf_adjnqwidqwjhdpoq();
--- ⚠️ WARNING: integrity protected!
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.7) ~  Much Love, Ferib 
+-- Initialize Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Bloxy Hub - Arsenal", "DarkTheme")
 
-]]--
+-- Aimbot Section
+local TabAimbot = Window:NewTab("Aimbot")
+local SectionAimbot = TabAimbot:NewSection("Smoothest aimbot ever ;)")
+
+local aimPart = "Head"
+
+SectionAimbot:NewDropdown("Target part", "Target part", {"Head", "Torso"}, function(part)
+    aimPart = part
+    print("Aimbot part selected: ".. part)
+end)
+
+-- Services
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+-- Aimbot settings
+local settings = {
+    Aimbot = false,
+    Aiming = false,
+    Aimbot_AimPart = aimPart,
+    Aimbot_TeamCheck = true,
+    Aimbot_Draw_FOV = true,
+    Aimbot_FOV_Radius = 200,
+    Aimbot_FOV_Color = Color3.fromRGB(255, 255, 255)
+}
+
+-- Draw FOV circle
+local fovCircle = Drawing.new("Circle")
+fovCircle.Visible = false
+fovCircle.Radius = settings.Aimbot_FOV_Radius
+fovCircle.Color = settings.Aimbot_FOV_Color
+fovCircle.Thickness = 1
+fovCircle.Filled = false
+fovCircle.Transparency = 1
+
+-- Function to find the closest enemy
+local function getClosestEnemy()
+    local closestEnemy = nil
+    local closestDistance = math.huge
+
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Character:FindFirstChild("Humanoid") then
+            if settings.Aimbot_TeamCheck and player.Team == LocalPlayer.Team then
+                continue
+            end
+            
+            local distance = (player.Character.HumanoidRootPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).magnitude
+            if distance < closestDistance and distance <= settings.Aimbot_FOV_Radius then
+                closestDistance = distance
+                closestEnemy = player
+            end
+        end
+    end
+
+    return closestEnemy
+end
+
+-- Aiming Function
+local function aimAtEnemy()
+    local enemy = getClosestEnemy()
+    if enemy and enemy.Character and enemy.Character:FindFirstChild(settings.Aimbot_AimPart) then
+        local aimPosition = enemy.Character[settings.Aimbot_AimPart].Position
+        Camera.CFrame = CFrame.new(Camera.CFrame.Position, aimPosition)
+    end
+end
+
+-- Input Handling for Aiming
+UserInputService.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then
+        settings.Aiming = true
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then
+        settings.Aiming = false
+    end
+end)
+
+-- Update Loop for Aimbot
+RunService.RenderStepped:Connect(function()
+    fovCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+
+    if settings.Aimbot then
+        fovCircle.Visible = true
+        if settings.Aiming then
+            aimAtEnemy()
+        end
+    else
+        fovCircle.Visible = false
+    end
+end)
+
+-- Toggle Aimbot
+SectionAimbot:NewToggle("Aimbot", "Toggle on and off", function(state)
+    settings.Aimbot = state
+    if settings.Aimbot then
+        print("Aimbot Enabled")
+    else
+        print("Aimbot Disabled")
+    end
+end)
+
+-- ESP Section
+local TabESP = Window:NewTab("ESP")
+local SectionESP = TabESP:NewSection("W ESP Feature")
+
+-- Store ESP components
+local espComponents = {}
+
+-- Function to create ESP for players
+local function createESP(v)
+    local BoxOutline = Drawing.new("Square")
+    BoxOutline.Visible = false
+    BoxOutline.Color = Color3.new(1, 0, 0)
+    BoxOutline.Thickness = 3
+    BoxOutline.Transparency = 1
+    BoxOutline.Filled = false
+
+    local Box = Drawing.new("Square")
+    Box.Visible = false
+    Box.Color = Color3.new(1, 0, 0)
+    Box.Thickness = 1
+    Box.Transparency = 1
+    Box.Filled = false
+
+    local tracer = Drawing.new("Line")
+    tracer.Visible = false
+    tracer.Color = Color3.new(1, 0, 0)
+    tracer.Thickness = 1
+
+    espComponents[v] = {BoxOutline, Box, tracer}
+
+    RunService.RenderStepped:Connect(function()
+        if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v ~= LocalPlayer and v.Character.Humanoid.Health > 0 then
+            local RootPart = v.Character.HumanoidRootPart
+            local Head = v.Character.Head
+
+            local RootPosition, RootVis = Camera:worldToViewportPoint(RootPart.Position)
+            local HeadPosition = Camera:worldToViewportPoint(Head.Position + Vector3.new(0, 0.5, 0))
+            local LegPosition = Camera:worldToViewportPoint(RootPart.Position - Vector3.new(0, 3, 0))
+
+            if RootVis then
+                BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+                BoxOutline.Visible = true
+
+                Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                Box.Visible = true
+
+                tracer.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+                tracer.To = Vector2.new(RootPosition.X, RootPosition.Y)
+                tracer.Visible = true
+            else
+                BoxOutline.Visible = false
+                Box.Visible = false
+                tracer.Visible = false
+            end
+        else
+            BoxOutline.Visible = false
+            Box.Visible = false
+            tracer.Visible = false
+        end
+    end)
+end
+
+-- Function to destroy ESP for a player
+local function destroyESP(v)
+    if espComponents[v] then
+        for _, drawing in pairs(espComponents[v]) do
+            drawing:Remove()  -- This will properly remove the drawing object
+        end
+        espComponents[v] = nil
+    end
+end
+
+-- Toggle ESP
+SectionESP:NewToggle("ESP", "Toggleable ESP script", function(state)
+    if state then
+        -- Create ESP for existing players
+        for _, v in pairs(Players:GetPlayers()) do
+            if v ~= LocalPlayer then
+                createESP(v)
+            end
+        end
+
+        -- Create ESP for new players
+        Players.PlayerAdded:Connect(function(v)
+            v.CharacterAdded:Connect(function()
+                createESP(v)
+            end)
+        end)
+
+        print("ESP Enabled")
+    else
+        -- Destroy ESP for all players
+        for _, v in pairs(Players:GetPlayers()) do
+            destroyESP(v)
+        end
+
+        -- Clear ESP components table
+        espComponents = {}
+
+        print("ESP Disabled")
+    end
+end)
+
+local Tab = Window:NewTab("Auto backstab")
+local Section = Tab:NewSection("Auto win basically even if it's kinda sucky")
+Section:NewLabel("USE AT OWN RISK I ADDED BYFRON BYPASS")
+
+-- Control variable for the Auto Backstab loop
+local backstabActive = false
+
+Section:NewToggle("Auto backstab", "Auto Back stab feature", function(state)
+    backstabActive = state  -- Set the control variable based on toggle state
+    if state then
+        print("Auto Backstab Enabled")
+        local localPlayer = Players.LocalPlayer
+        local currentCamera = workspace.CurrentCamera
+
+        local function teleportBehindTarget(player)
+            if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                localPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + player.Character.HumanoidRootPart.CFrame.LookVector * -4
+            end
+        end
+
+        local function getRandomEnemyPlayer()
+            local enemies = {}
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player ~= localPlayer and player.TeamColor ~= localPlayer.TeamColor then
+                    table.insert(enemies, player)
+                end
+            end
+            if #enemies > 0 then
+                return enemies[math.random(1, #enemies)]
+            end
+            return nil
+        end
+
+        -- Start the backstab loop
+        spawn(function()  -- Use spawn to run the loop in a separate thread
+            while backstabActive do
+                local enemy = getRandomEnemyPlayer()
+                if enemy and enemy.Character and enemy.Character:FindFirstChild("HumanoidRootPart") then
+                    teleportBehindTarget(enemy)
+                    wait(0.1)
+                    currentCamera.CFrame = CFrame.new(currentCamera.CFrame.Position, enemy.Character.HumanoidRootPart.Position)
+                end
+                wait(0.3)  -- Adjust the wait time as needed
+            end
+        end)
+    else
+        print("Auto Backstab Disabled")
+        backstabActive = false  -- Ensure the loop stops
+    end
+end)
